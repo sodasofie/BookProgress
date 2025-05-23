@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(/images/bg_login.png);
+    background-repeat: repeat;
+    background-size: 700px 700px;
+}
+
+
+.register-page {
+    background: #adbda5;
+}
+
+.auth-card {
+    background-color: #edf3eb;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+}
+
+.auth-card .logo img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.auth-card .tagline {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #4e4361;
+    text-align: center;
+}
+
+
+.auth-card .form-box {
+    width: 100%;
+}
+
+.auth-card input,
+.auth-card button,
+.auth-card select,
+.auth-card textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-page>.logo,
+.login-page>.form-box {
+    grid-column: 2;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.form-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(41, 90, 44, 0.233);
+    border-radius: 4px;
+}
+
+.form-box h2 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-box input,
+.form-box button {
+    width: 100%;
+    padding: .6rem;
+    margin: .5rem 0;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+#login-btn,
+#login-register,
+#register-btn {
+    font-weight: 600;
+    color: #355735;
+    background: #eafae8;
+    border: solid 1px #7e977d;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+#login-btn:hover,
+#login-register:hover,
+#register-btn:hover {
+
+    color: #244b24;
+    background-color: #d1eccd;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+.form-box button.google-btn {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    border: none;
+    color: #ca4c7c;
+    background: #faeef4;
+    border: solid 1px #e4a9c2;
+    cursor: pointer;
+}
+
+.form-box button.google-btn:hover {
+    color: #8b2447;
+    background: #f3d0e2;
+    border: solid 1px #ce96ad;
+    cursor: pointer;
+}
+
+.form-box p {
+    font-size: .9rem;
+    margin-top: .5rem;
+}
+
+.form-box a {
+    font-style: italic;
+    color: #7267a1;
+    text-decoration: none;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+::selection {
+    background: #ffbdd3;
+}
+
+::-moz-selection {
+    background: #ffbdd3;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    text-align: left;
+  }

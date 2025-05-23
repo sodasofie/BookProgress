@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вхід / Реєстрація</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style/auth.css">
+</head>
+
+<body>
+
+  <div class="login-page">
+    <div class="auth-card">
+
+    <div class="logo">
+      <img src="images/logo.png" alt="Логотип BookProgress">
+    </div>
+    <div class="tagline">
+      <p>
+        BookProgress — не просто список книг, а твій шлях читача.<br>
+        Ми допоможемо тобі побачити, як далеко ти вже пройшов.
+      </p>
+    </div>
+
+    <div class="form-box">
+      <div id="login-form">
+        <h2>Увійти</h2>
+        <input type="email" id="login-email" placeholder="Електронна адреса (email)" required>
+        <input type="password" id="login-password" placeholder="Пароль" required>
+        <button id="login-btn">Увійти</button>
+        <p><a href="reset-password.html" id="forgot-password-link">Не можете ввійти?</a></p>
+
+
+        <p>Немає акаунту? <a href="#" id="show-register">Зареєструватись</a></p>
+        <button class="google-btn" id="google-login-btn">Увійти за допомогою Google</button>
+      </div>
+
+      <div id="register-form" style="display: none;">
+        <h2>Зареєструватись</h2>
+        <input type="text" id="register-name" placeholder="Ваше ім'я" required 
+        minlength="1" maxlength="80"
+        pattern="^(?=.{1,80}$)(?=.*[^\d\W]).+$"
+        title="В імені має бути мінімум 1 символ.
+        Ім'я повинне містити хоча б одну літеру, не може бути лише цифрами або лише знаками.">
+        
+        <input type="email" id="register-email" placeholder="Електронна адреса (email)" required>
+        <input type="password" id="register-password" placeholder="Пароль" required 
+        minlength="8"
+        pattern="^(?=.{8,}$)(?=.*\p{Ll})(?=.*\p{Lu})(?=.*\d)(?=.*[\W_]).+$"
+        title="Пароль має містити мінімум 8 символів.
+        Пароль має містити мінімум одну маленьку букву, одну велику, одну цифру та один спеціальний знак.">
+
+        <input type="password" id="register-confirm" placeholder="Повторіть пароль" required>
+        <input type="date" id="register-birthday" placeholder="Дата народження"  max="2019-12-31" required>
+
+        <button id="register-btn">Зареєструватись</button>
+
+        <p>Вже маєте акаунт? <a href="#" id="show-login">Увійти</a></p>
+        <button class="google-btn" id="google-login-btn2">Увійти за допомогою Google</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script type="module" src="script/login.js"></script>
+  
+</body>
+
+</html>
